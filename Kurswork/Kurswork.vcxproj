@@ -115,6 +115,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Axiom.cpp" />
+    <ClCompile Include="Concept.cpp" />
+    <ClCompile Include="Defenition.cpp" />
+    <ClCompile Include="Lemma.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Theorem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Axiom.h" />
+    <ClInclude Include="Concept.h" />
+    <ClInclude Include="Defenition.h" />
+    <ClInclude Include="IApproval.h" />
+    <ClInclude Include="Lemma.h" />
+    <ClInclude Include="Theorem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
