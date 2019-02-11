@@ -27,6 +27,12 @@ void Concept::SetStatement(string filename)
 	out.close();
 }
 
+void Concept::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement;
+}
+
 string Concept::GetStatement()
 {
 	return this->statement;

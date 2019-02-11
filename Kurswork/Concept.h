@@ -12,7 +12,7 @@ public:
 	~Concept();
 	Concept(string statement_);
 	void SetStatement(string filename)override;
-	void PutToFile(string str)override;
+	void PutToFile(string filename)override;
 	string GetStatement()override;
 private:
 	string statement;

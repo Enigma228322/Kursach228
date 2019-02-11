@@ -27,6 +27,12 @@ void Axiom::SetStatement(string filename)
 	out.close();
 }
 
+void Axiom::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement;
+}
+
 string Axiom::GetStatement()
 {
 	return this->statement;

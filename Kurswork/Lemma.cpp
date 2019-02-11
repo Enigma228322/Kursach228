@@ -28,6 +28,14 @@ void Lemma::SetProof(string filename)
 	out.close();
 }
 
+void Lemma::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement;
+	out << "Proof:\n" << this->proof;
+	out.close();
+}
+
 string Lemma::GetProof()
 {
 	return this->proof;

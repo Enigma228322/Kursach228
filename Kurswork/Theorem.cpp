@@ -51,6 +51,6 @@ string Theorem::GetStatement()
 
 void Theorem::operator=(Lemma obj)
 {
-	this->statement = obj.GetStatement;
-	this->proof = obj.GetProof;
+	this->statement = obj.GetStatement();
+	this->proof = obj.GetProof();
 }
