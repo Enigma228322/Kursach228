@@ -54,4 +54,12 @@
       <Filter>Исходные файлы\Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="lemma1.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lemma2.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

@@ -1,0 +1,4 @@
+Statement:
+Second lemma's statement
+Proof:
+Second lemma's proof

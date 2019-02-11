@@ -130,6 +130,10 @@
     <ClInclude Include="Lemma.h" />
     <ClInclude Include="Theorem.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="lemma1.txt" />
+    <Text Include="lemma2.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

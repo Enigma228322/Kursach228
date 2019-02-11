@@ -41,8 +41,13 @@ string Lemma::GetProof()
 	return this->proof;
 }
 
+string Lemma::GetStatement()
+{
+	return this->statement;
+}
+
 Lemma Lemma::operator+(Lemma obj)
 {
-	return Lemma(this->statement + obj.statement,
-		this->proof + obj.proof);
+	return Lemma(this->statement + "\n" + obj.statement,
+		this->proof + "\n" + obj.proof);
 }
