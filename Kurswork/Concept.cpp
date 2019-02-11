@@ -4,6 +4,7 @@
 
 Concept::Concept()
 {
+	statement = "";
 }
 
 

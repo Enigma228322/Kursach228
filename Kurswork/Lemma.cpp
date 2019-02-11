@@ -38,12 +38,12 @@ void Lemma::PutToFile(string filename)
 
 string Lemma::GetProof()
 {
-	return this->proof;
+	return ("Proof:" + this->proof);
 }
 
 string Lemma::GetStatement()
 {
-	return this->statement;
+	return ("Statement:" + this->statement);
 }
 
 Lemma Lemma::operator+(Lemma obj)

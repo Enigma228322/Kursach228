@@ -10,7 +10,7 @@ class Concept : public IApproval
 public:
 	Concept();
 	~Concept();
-	Concept(string statement_);
+	Concept(string statement_);	
 	void SetStatement(string filename)override;
 	void PutToFile(string filename)override;
 	string GetStatement()override;

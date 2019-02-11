@@ -13,7 +13,7 @@ public:
 	Lemma();
 	~Lemma();
 	Lemma(string statement_, string proof_);
-	void SetProof(string filename);
+	void SetProof(string filename)override;
 	void PutToFile(string filename);
 	
 	string GetProof();

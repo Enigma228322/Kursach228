@@ -7,7 +7,7 @@ class Defenition : public Concept
 public:
 	Defenition();
 	~Defenition();
-	Defenition(string statement_);
+	Defenition(string statement);
 private:
 	string statement;
 };

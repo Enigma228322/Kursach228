@@ -58,12 +58,23 @@ Pair ReadFile(string filename)
 
 int main()
 {
+	cout << "...Reading data from lemma1.txt file...\n";
 	Pair temp1 = ReadFile(Lemma1);
+	cout << "...Reading data from lemma2.txt file...\n";
 	Pair temp2 = ReadFile(Lemma2);
+
+	//Создаём 2 объекта класса Lemma и в конструкторе присваивем им соответ. поля
 	Lemma l1(temp1.statement, temp1.proof), l2(temp2.statement, temp2.proof);
+	//Создаём объект класса Theorem
 	Theorem t;
+	cout << "Lemma1:\n" << l1.GetStatement() << "\n" << l1.GetProof() << "\n";
+	cout << "Lemma2:\n" << l2.GetStatement() << "\n" << l2.GetProof() << "\n";
+	//Складываем 2 объекта класса Lemma, а имеено l1 + l2 и присваиваем рез-тат объекту t
 	t = l1 + l2;
+	// Проверяем роботоспособность методов Get
+	cout << "\nTheorem:\n";
 	cout << t.GetStatement() << "\n" << t.GetProof() << "\n";
+	// Выводим результат в текстовый документ
 	t.PutToFile(TheoremFile);
 	system("pause");
 	return 0;
