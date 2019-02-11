@@ -133,6 +133,7 @@
   <ItemGroup>
     <Text Include="lemma1.txt" />
     <Text Include="lemma2.txt" />
+    <Text Include="Theorem.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

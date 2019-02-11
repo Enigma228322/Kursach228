@@ -64,6 +64,7 @@ int main()
 	Theorem t;
 	t = l1 + l2;
 	cout << t.GetStatement() << "\n" << t.GetProof() << "\n";
+	t.PutToFile(TheoremFile);
 	system("pause");
 	return 0;
 }

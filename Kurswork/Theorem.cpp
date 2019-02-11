@@ -54,3 +54,11 @@ void Theorem::operator=(Lemma obj)
 	this->statement = obj.GetStatement();
 	this->proof = obj.GetProof();
 }
+
+void Theorem::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement;
+	out << "\nProof:\n" << this->proof;
+	out.close();
+}

@@ -15,6 +15,7 @@ public:
 	Theorem(string statement_, string proof_);
 	void SetProof(string filename);
 	void SetStatement(string filename);
+	void PutToFile(string filename);
 	string GetProof();
 	string GetStatement();
 	void operator= (Lemma obj);

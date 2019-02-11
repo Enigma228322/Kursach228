@@ -61,5 +61,8 @@
     <Text Include="lemma2.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="Theorem.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

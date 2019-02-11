@@ -32,7 +32,7 @@ void Lemma::PutToFile(string filename)
 {
 	ofstream out(filename);
 	out << "Statement:\n" << this->statement;
-	out << "Proof:\n" << this->proof;
+	out << "\nProof:\n" << this->proof;
 	out.close();
 }
 
