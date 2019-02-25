@@ -1,25 +1,21 @@
 #pragma once
-
-#include <string>
-#include <iostream>
-#include <fstream>
 #include "Lemma.h"
-
-using namespace std;
 
 class Theorem
 {
+private:
+	string statement, proof;
+	Lemma lemma1;
 public:
 	Theorem();
 	~Theorem();
-	Theorem(string statement_, string proof_);
-	void SetProof(string filename);
+	Theorem(string statement, string proof);
+	void Class—omposition(string lemma_statement, string lemma_proof);
 	void SetStatement(string filename);
+	void SetProof(string filename);
 	void PutToFile(string filename);
-	string GetProof();
+	void SetLemma(string statement, string proof);
 	string GetStatement();
-	void operator= (Lemma obj);
-private:
-	string statement, proof;
+	string GetProof();
+	void operator=(Lemma obj);
 };
-

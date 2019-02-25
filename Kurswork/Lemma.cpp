@@ -11,10 +11,10 @@ Lemma::~Lemma()
 {
 }
 
-Lemma::Lemma(string statement_, string proof_)
+Lemma::Lemma(string statement, string proof)
 {
-	this->statement = statement_;
-	this->proof = proof_;
+	this->statement = statement;
+	this->proof = proof;
 }
 
 void Lemma::SetProof(string filename)
@@ -28,26 +28,13 @@ void Lemma::SetProof(string filename)
 	out.close();
 }
 
-void Lemma::PutToFile(string filename)
-{
-	ofstream out(filename);
-	out << "Statement:\n" << this->statement;
-	out << "\nProof:\n" << this->proof;
-	out.close();
-}
-
 string Lemma::GetProof()
 {
-	return ("Proof:" + this->proof);
-}
-
-string Lemma::GetStatement()
-{
-	return ("Statement:" + this->statement);
+	return proof;
 }
 
 Lemma Lemma::operator+(Lemma obj)
 {
-	return Lemma(this->statement + "\n" + obj.statement,
-		this->proof + "\n" + obj.proof);
+	return Lemma(this->statement + " " + obj.GetStatement(),
+		this->proof + " " + obj.GetProof());
 }

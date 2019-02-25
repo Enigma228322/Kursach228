@@ -1,6 +1,6 @@
 Statement:
-Statement:First lemma's statement 
+First lemma's statement 
 Second lemma's statement 
 Proof:
-Proof:First lemma's proof 
+First lemma's proof 
 Second lemma's proof 

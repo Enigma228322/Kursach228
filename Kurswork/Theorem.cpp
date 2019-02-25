@@ -1,31 +1,25 @@
 #include "Theorem.h"
 
 
-
 Theorem::Theorem()
 {
 }
 
+Theorem::Theorem(string statement, string proof)
+{
+	this->statement = statement;
+	this->proof = proof;
+}
+
+
+void Theorem::ClassÑomposition(string lemma_statement, string lemma_proof)
+{
+	Lemma lemma2 = Lemma(lemma_statement, lemma_proof); 
+	*this = lemma1 + lemma2;
+}
 
 Theorem::~Theorem()
 {
-}
-
-Theorem::Theorem(string statement_, string proof_)
-{
-	this->statement = statement_;
-	this->proof = proof_;
-}
-
-void Theorem::SetProof(string filename)
-{
-	ofstream out(filename);
-	string temp_proof;
-	cout << "Enter the lemma's proof:\n";
-	cin >> temp_proof;
-	out << "Proof:\n" + temp_proof;
-	this->proof = temp_proof;
-	out.close();
 }
 
 void Theorem::SetStatement(string filename)
@@ -39,14 +33,37 @@ void Theorem::SetStatement(string filename)
 	out.close();
 }
 
-string Theorem::GetProof()
+void Theorem::SetProof(string filename)
 {
-	return this->proof;
+	ofstream out(filename);
+	string temp_proof;
+	cout << "Enter the lemma's proof:\n";
+	cin >> temp_proof;
+	out << "Proof:\n" + temp_proof;
+	this->proof = temp_proof;
+	out.close();
+}
+
+void Theorem::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement;
+	out.close();
+}
+
+void Theorem::SetLemma(string statement, string proof)
+{
+	lemma1 = Lemma(statement, proof);
 }
 
 string Theorem::GetStatement()
 {
-	return this->statement;
+	return statement;
+}
+
+string Theorem::GetProof()
+{
+	return proof;
 }
 
 void Theorem::operator=(Lemma obj)
@@ -55,10 +72,3 @@ void Theorem::operator=(Lemma obj)
 	this->proof = obj.GetProof();
 }
 
-void Theorem::PutToFile(string filename)
-{
-	ofstream out(filename);
-	out << "Statement:\n" << this->statement;
-	out << "\nProof:\n" << this->proof;
-	out.close();
-}
