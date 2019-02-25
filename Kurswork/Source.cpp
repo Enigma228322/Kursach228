@@ -62,6 +62,10 @@ int main()
 	Pair temp1 = ReadFile(Lemma1);
 	cout << "...Reading data from lemma2.txt file...\n";
 	Pair temp2 = ReadFile(Lemma2);
+	Theorem t;
+	t.SetLemma(temp1.statement, temp1.proof);
+	t.ClassÑomposition(temp2.statement, temp2.proof);
+	cout << t.GetStatement() << "\n" << t.GetProof();
 	system("pause");
 	return 0;
 }

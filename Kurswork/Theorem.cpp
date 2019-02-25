@@ -14,7 +14,7 @@ Theorem::Theorem(string statement, string proof)
 
 void Theorem::ClassÑomposition(string lemma_statement, string lemma_proof)
 {
-	Lemma lemma2 = Lemma(lemma_statement, lemma_proof); 
+	Lemma lemma2 = Lemma(lemma_statement, lemma_proof);
 	*this = lemma1 + lemma2;
 }
 
@@ -65,6 +65,12 @@ string Theorem::GetProof()
 {
 	return proof;
 }
+
+//Lemma Theorem::operator+(Lemma obj)
+//{
+//	return Lemma(this->lemma1.GetStatement() + " " + obj.GetStatement(),
+//		this->lemma1.GetProof() + " " + obj.GetProof());
+//}
 
 void Theorem::operator=(Lemma obj)
 {

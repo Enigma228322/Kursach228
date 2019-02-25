@@ -17,5 +17,6 @@ public:
 	void SetLemma(string statement, string proof);
 	string GetStatement();
 	string GetProof();
+	//Lemma operator+(Lemma obj);
 	void operator=(Lemma obj);
 };
