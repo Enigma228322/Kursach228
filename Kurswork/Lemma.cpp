@@ -28,12 +28,17 @@ void Lemma::SetProof(string filename)
 	out.close();
 }
 
+string Lemma::GetStatement()
+{
+	return statement;
+}
+
 string Lemma::GetProof()
 {
 	return proof;
 }
 
-Lemma Lemma::operator+(Lemma obj)
+Lemma Lemma::operator+(Lemma obj)	
 {
 	return Lemma(this->statement + " " + obj.GetStatement(),
 		this->proof + " " + obj.GetProof());

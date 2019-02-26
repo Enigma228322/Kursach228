@@ -1,22 +1,21 @@
 #pragma once
 #include "Lemma.h"
+#include <vector>
 
 class Theorem
 {
 private:
 	string statement, proof;
-	Lemma lemma1;
+	vector <Lemma> lemma;
 public:
 	Theorem();
 	~Theorem();
 	Theorem(string statement, string proof);
-	void Class—omposition(string lemma_statement, string lemma_proof);
+	void Class—omposition();
+	void AddLemma(string statement, string proof);
 	void SetStatement(string filename);
 	void SetProof(string filename);
 	void PutToFile(string filename);
-	void SetLemma(string statement, string proof);
 	string GetStatement();
 	string GetProof();
-	//Lemma operator+(Lemma obj);
-	void operator=(Lemma obj);
 };

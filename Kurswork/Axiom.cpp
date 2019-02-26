@@ -35,5 +35,5 @@ void Axiom::PutToFile(string filename)
 
 string Axiom::GetStatement()
 {
-	return this->statement;
+	return statement;
 }

@@ -11,11 +11,21 @@ Theorem::Theorem(string statement, string proof)
 	this->proof = proof;
 }
 
-
-void Theorem::Class—omposition(string lemma_statement, string lemma_proof)
+void Theorem::AddLemma(string statement, string proof)
 {
-	Lemma lemma2 = Lemma(lemma_statement, lemma_proof);
-	*this = lemma1 + lemma2;
+	lemma.push_back(Lemma(statement, proof));
+}
+
+
+void Theorem::Class—omposition()
+{
+	Lemma temp_lemma;
+	for (int i = 0; i < lemma.size(); i++)
+	{
+		temp_lemma = temp_lemma + lemma[i];	
+	}
+	this->statement = temp_lemma.GetStatement();
+	this->proof = temp_lemma.GetProof();
 }
 
 Theorem::~Theorem()
@@ -51,11 +61,6 @@ void Theorem::PutToFile(string filename)
 	out.close();
 }
 
-void Theorem::SetLemma(string statement, string proof)
-{
-	lemma1 = Lemma(statement, proof);
-}
-
 string Theorem::GetStatement()
 {
 	return statement;
@@ -71,10 +76,3 @@ string Theorem::GetProof()
 //	return Lemma(this->lemma1.GetStatement() + " " + obj.GetStatement(),
 //		this->lemma1.GetProof() + " " + obj.GetProof());
 //}
-
-void Theorem::operator=(Lemma obj)
-{
-	this->statement = obj.GetStatement();
-	this->proof = obj.GetProof();
-}
-
