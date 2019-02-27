@@ -13,7 +13,7 @@ public:
 	Axiom();
 	~Axiom();
 	Axiom(string statement_);
-	void SetStatement(string filename)override;
+	void SetStatement(string statement_)override;
 	void PutToFile(string filename)override;
 	string GetStatement()override;
 private:

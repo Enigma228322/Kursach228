@@ -41,7 +41,6 @@ Pair ReadFile(string filename)
 			read = 1;
 			continue;
 		}
-		
 		if (temp == "Proof:" ||
 			temp == "Proof")
 		{
@@ -62,22 +61,13 @@ int main()
 	Pair temp1 = ReadFile(Lemma1);
 	cout << "...Reading data from lemma2.txt file...\n";
 	Pair temp2 = ReadFile(Lemma2);
-	Theorem t;
+	Theorem t("Theorem's statement", "Theorem's proof");
+	Pair temp_theorem = ReadFile(TheoremFile);	
+	t.SetStatement(temp_theorem.statement);
+	t.SetProof(temp_theorem.proof);
 	t.AddLemma(temp1.statement, temp1.proof);
 	t.AddLemma(temp2.statement, temp2.proof);
-	t.ClassСomposition();
 	cout << t.GetStatement() << "\n" << t.GetProof();
 	system("pause");
 	return 0;
 }
-
-	////Создаём 2 объекта класса Lemma и в конструкторе присваивем им соответ. поля
-	//Lemma l1(temp1.statement, temp1.proof), l2(temp2.statement, temp2.proof);
-	//cout << "Lemma1:\n" << l1.GetStatement() << "\n" << l1.GetProof() << "\n";
-	//cout << "Lemma2:\n" << l2.GetStatement() << "\n" << l2.GetProof() << "\n";
-	//l1.operator=(l2);
-	//// Проверяем роботоспособность методов Get
-	//cout << "\nTheorem:\n";
-	//cout << l1.GetStatement(false) << "\n" << l1.GetProof(false) << "\n";
-	//// Выводим результат в текстовый документ
-	//l1.PutToFile(TheoremFile);

@@ -1,6 +1,4 @@
-Statement:
-First lemma's statement 
-Second lemma's statement 
+﻿Statement:
+Theorema's statement
 Proof:
-First lemma's proof 
-Second lemma's proof 
+Theorema's proof

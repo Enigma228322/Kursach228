@@ -11,10 +11,9 @@ public:
 	Theorem();
 	~Theorem();
 	Theorem(string statement, string proof);
-	void Class—omposition();
 	void AddLemma(string statement, string proof);
-	void SetStatement(string filename);
-	void SetProof(string filename);
+	void SetStatement(string statement_);
+	void SetProof(string proof_);
 	void PutToFile(string filename);
 	string GetStatement();
 	string GetProof();

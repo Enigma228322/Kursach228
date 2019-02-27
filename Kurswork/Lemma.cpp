@@ -17,15 +17,14 @@ Lemma::Lemma(string statement, string proof)
 	this->proof = proof;
 }
 
-void Lemma::SetProof(string filename)
+void Lemma::SetStatement(string statement_)
 {
-	ofstream out(filename);
-	string temp_proof;
-	cout << "Enter the lemma's proof:\n";
-	cin >> temp_proof;
-	out << "Proof:\n" + temp_proof;
-	this->proof = temp_proof;
-	out.close();
+	statement = statement_;
+}
+
+void Lemma::SetProof(string proof_)
+{
+	proof = proof_;
 }
 
 string Lemma::GetStatement()
@@ -38,8 +37,17 @@ string Lemma::GetProof()
 	return proof;
 }
 
+void Lemma::PutToFile(string filename)
+{
+	ofstream out(filename);
+	out << "Statement:\n" << this->statement << "\n";
+	out << "Proof:\n" << this->statement << "\n";
+	out.close();
+}
+
 Lemma Lemma::operator+(Lemma obj)	
 {
 	return Lemma(this->statement + " " + obj.GetStatement(),
 		this->proof + " " + obj.GetProof());
 }
+
